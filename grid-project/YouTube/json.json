@@ -1,0 +1,28 @@
+[
+    {
+        "thumbnail":"./Image/song1.png",
+        "title":"Song-Mix",
+        "video":"./Video/song1.mp4"
+    },
+   
+        {
+            "thumbnail":"./Image/song2.png",
+            "title":"Mantra",
+            "video":"./Video/song2.mp4"
+        },
+        {
+            "thumbnail":"./Image/song2.png",
+            "title":"Lord-Mantra",
+            "video":"./Video/song3.mp4"
+        },
+        {
+            "thumbnail":"./Image/song4.png",
+            "title":"Mantra",
+            "video":"./Video/song4.mp4"
+        },
+        {
+            "thumbnail":"./Image/song5.png",
+            "title":"Song-Mantra",
+            "video":"./Video/song5.mp4"
+        }
+]

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+            align-items: center; background: linear-gradient(to bottom right, darkgrey,rgb(253, 130, 130));
+    transition: background-color 0.5s;
+        }
+       h1{
+        margin-top: 20%;
+       }
+    </style>
+</head>
+<body>
+    <h1><i>Welcome to home page</i></h1>
+
+    <script>
+         let userName=localStorage.getItem("userName");
+         var s=`Dear ${userName} , Go main page`;
+         
+        document.write(`Dear ${userName} your are login successful`);
+    </script>
+</body>
+</html>

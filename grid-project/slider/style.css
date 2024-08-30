@@ -1,0 +1,129 @@
+/* Created by Tivotal */
+
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #222;
+  overflow: hidden;
+}
+
+.content input {
+  visibility: hidden;
+  display: none;
+}
+
+.content .indicators {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 100;
+}
+
+.indicators label {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  opacity: 0.5;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.content input:nth-child(1):checked ~ .indicators label:nth-child(1),
+.content input:nth-child(2):checked ~ .indicators label:nth-child(2),
+.content input:nth-child(3):checked ~ .indicators label:nth-child(3) {
+  width: 50px;
+  opacity: 1;
+}
+
+.content .slides {
+  position: relative;
+  width: 300vw;
+  display: flex;
+  transition: 0.5s;
+  left: -200vw;
+}
+
+.slides .slide {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  text-align: center;
+  padding: 40px;
+  color: #fff;
+}
+
+.slides .slide:nth-child(1) {
+  background: linear-gradient(90deg, #520979, #0800ff);
+}
+
+.slides .slide:nth-child(2) {
+  background: linear-gradient(90deg, #793009, #ff7700);
+}
+
+.slides .slide:nth-child(3) {
+  background: linear-gradient(90deg, #790966, #ff0070);
+}
+
+.content input:nth-child(1):checked ~ .slides {
+  left: -200vw;
+}
+
+.content input:nth-child(2):checked ~ .slides {
+  left: -100vw;
+}
+
+.content input:nth-child(1):checked ~ .slides {
+  left: 0;
+}
+
+.slides .slide i {
+  font-size: 150px;
+}
+
+.slides .slide h2 {
+  font-size: 70px;
+}
+
+.slides .slide p {
+  max-width: 700px;
+  font-size: 20px;
+  color: #aaa;
+}
+
+.slides .slide button {
+  padding: 10px 35px;
+  margin-top: 10px;
+  background: #fff;
+  color: #000;
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.slides .slide button:hover {
+  letter-spacing: 1.5px;
+}

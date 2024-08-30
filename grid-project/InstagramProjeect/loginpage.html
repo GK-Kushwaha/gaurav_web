@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body{
+            box-sizing: border-box;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom right, darkgrey,rgb(253, 130, 130));
+    transition: background-color 0.5s;
+        }
+        fieldset{
+            height: 20vh;
+            width: 20vw;
+            padding-top: 23px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Login Page</legend>
+        <input type="text" name="euserName" placeholder="Enter User Name"><br> <br>
+        <input type="text" name="epassword" placeholder="Enter Password"><br><br>
+        <button type="submit">Login</button>
+    </fieldset>
+    </form>
+    <script>
+        let form=document.querySelector("form");
+        // console.log(form);
+        form.addEventListener("submit",(e)=>{
+        e.preventDefault();
+
+        let euserName=document.getElementsByName("euserName") [0].value;
+        let epassword=document.getElementsByName("epassword") [0].value;
+
+        let userName=localStorage.getItem("userName");
+        let Password=localStorage.getItem("Password");
+
+        console.log(euserName);
+        console.log(epassword);
+
+        console.log(userName);
+        console.log(Password);
+
+        if(userName==euserName && Password==epassword)
+        {
+            alert("Login Successful");
+            open("./Home.html");
+
+        }else if(euserName==""&&epassword==""){
+            alert("Please Fill Details");
+        }else{
+            alert("Invalid Details");
+        }
+    });
+
+    </script>
+</body>
+</html>

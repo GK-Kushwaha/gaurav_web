@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up page</title>
+    <style>
+        body{
+            box-sizing: border-box;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center; background: linear-gradient(to bottom right, darkgrey,rgb(253, 130, 130));
+    transition: background-color 0.5s;
+        }
+        fieldset{
+            height: 20vh;
+            width: 20vw;
+            padding-top: 23px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+    <fieldset>
+        <legend>Sign Up</legend>
+    <input type="text" name="userName" placeholder="Enter User Name"><br> <br>
+    <input type="text" name="Password" placeholder="Enter Password"><br><br>
+    <button type="submit">Sign Up</button>
+</fieldset>
+</form>
+
+<!-- <script src="./sign.js"></script> -->
+<script>
+
+let form=document.querySelector("form");
+    console.log(form);
+    form.addEventListener("submit", (e)=>{
+        e.preventDefault();
+
+        let userName=document.getElementsByName("userName") [0].value;
+        let Password=document.getElementsByName("Password") [0].value;
+
+        console.log(userName);
+        console.log(Password);
+
+        if(userName=="" && Password==""){
+            alert("Fill all details");
+        }
+        else if(userName==""){
+            alert("UserName should not empty");
+        }
+        else if(Password==""){
+            alert("Password sholud not empty");
+        }
+        else{
+            localStorage.setItem("userName",userName);
+            localStorage.setItem("Password", Password);
+
+            alert("Registered Successfull");
+            open("./loginpage.html");
+        }
+
+    })
+    </script>
+
+</body>
+</html>

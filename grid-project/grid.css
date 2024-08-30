@@ -1,0 +1,130 @@
+body,html{
+    font-family: 'Times New Roman', Times, serif;
+    height: 100vh;
+    box-sizing: border-box;
+    background: linear-gradient(
+        to bottom right, rgb(1, 54, 1), rgb(9, 2, 40));
+        margin: 0px;
+        padding: 0px;
+}
+
+#section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 5fr 2fr 2fr 3fr;
+    grid-template-areas: 
+      "div-nav div-nav div-nav"
+      "div-slider div-slider div-slider"
+      "pro1 pro2 pro3"
+      "pro4 pro5 pro6"
+      "footer footer footer"
+    ;
+    gap: 10px;
+    height: 150%;
+}
+ #div-nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    gap: 50px;
+    grid-area: div-nav;
+    background-color: rgb(74, 4, 4);
+}
+nav{
+    margin-top: 3px;
+    padding: 5px;
+    text-align: center;
+}
+#c{
+    margin-right: 3px;                          
+}
+a{
+    font-size: larger;  
+    font-style:normal;
+}
+#div-slider{
+    grid-area: div-slider;
+    background-color: rgb(187, 219, 247);
+    background-image: url(./p2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 5px solid rgba(92, 6, 1, 0.653);
+
+}
+.a-nav{
+    color: whitesmoke;
+    text-decoration: none;
+    font-display:initial;
+    font-size: x-large;
+
+}
+#pro1{
+    grid-area: pro1;
+}
+#pro2{
+    grid-area: pro2;
+}
+#pro3{
+    grid-area: pro3;
+}
+#pro4{
+    grid-area: pro4;
+}
+#pro5{
+    grid-area: pro5;
+}#pro6{
+    grid-area: pro6;
+}
+#footer{
+    grid-area: footer;
+    background-color: rgb(119, 183, 244);
+} 
+
+.a-nav:hover,#div-slider:hover,#pro1:hover,#pro2:hover,#pro3:hover,#pro4:hover,#pro5:hover,#pro6:hover{
+    transform: scale(1.01);
+box-shadow: 0 8px 16px rgba(238, 234, 234, 0.9 );
+}
+#div-slider,#pro1,#pro2,#pro3,#pro4,#pro5,#pro6{
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    transition: transform 0.5s, box-shadow 0.3s;
+}
+#footer{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+.nf1{
+    margin-right: 200px;
+}
+.nf2{
+    margin-top: -40px;
+}
+.nfooter1{
+    margin-right: 40px;
+    margin-top: 70px;
+}
+@media(max-width: 700px){
+    #section{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "div-nav"
+        "div-slider"
+        "pro1"
+        "pro2"
+        "pro3"
+        "pro4"
+        "pro5"
+        "pro6"
+        "footer";
+    }
+}
+/* "div-nav div-nav div-nav"
+      "div-slider div-slider div-slider"
+      "pro1 pro2 pro3"
+      "pro4 pro5 pro6"
+      "footer footer footer"*/

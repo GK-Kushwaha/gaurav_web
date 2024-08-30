@@ -1,0 +1,380 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    scroll-behavior: smooth;
+    /* font-family: 'Lora', serif; */
+    font-family: 'Lato', sans-serif;
+    /* font-family: 'Barlow Condensed', sans-serif; */
+}
+:root{
+ --primcolor : #f0f0f0;
+ --primblack : #050303;
+ --primyellow : #ffa500;
+}
+
+/* Navbar------------ */
+#navbar{
+    background: var(--primcolor);
+}
+#logo{
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--primblack);
+    text-shadow: 0px 1px 1px var(--primblack);
+}
+#logo span{
+    color: var(--primyellow);
+}
+.navbar-toggler span{
+    color: var(--primyellow);
+
+}
+.navbar-nav{
+    margin-left: 20px;
+}
+.nav-item .nav-link{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--primblack);
+    letter-spacing: 1px;
+    border-radius: 3px;
+    transition: 0.5s ease;
+}
+.nav-item .nav-link:hover{
+    background-color: var(--primyellow);
+    color: var(--primcolor);
+}
+
+#navbar form button{
+    background-color: var(--primyellow);
+    color: var(--primcolor);
+    border: none;
+}
+/* Navbar------------ */
+
+/* Home section ----- */
+.home{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(./image/background\ img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home .content{
+    text-align: center;
+    padding-top: 200px;
+}
+.home .content h5{
+    color: var(--primcolor);
+    margin-top: 150px;
+    font-size: 38px;
+    font-weight: 500;
+    text-shadow: 0px 1px 1px var(--primblack);
+}
+.home .content h1{
+    color: var(--primcolor);
+    font-size: 40px;
+    font-weight: 200;
+    text-shadow: 2px 4px 6px var(--primblack);
+    margin-top: 10px;
+}
+.home .content p{
+    color: var(--primcolor);
+    font-size: 20px;
+    font-weight: 500;
+    text-shadow: 0px 1px 1px var(--primblack);
+    margin-bottom: 30px;
+    margin-top: 5px;
+}
+.changecontent::after{
+    content: '';
+    color: var(--primyellow);
+    text-shadow: 0px 1px 1px var(--primblack);
+    animation: changetext 10s infinite linear;
+}
+@keyframes changetext{
+10%{content: 'India';}
+20%{content: 'Uttar Pradesh';}
+30%{content: 'Maharastra';}
+40%{content: 'Jaipur';}
+50%{content: 'Delhi';}
+60%{content: 'Mysuru';}
+70%{content: 'Maharastra';}
+80%{content: 'Uttar Pradesh';}
+90%{content: 'Panjab';}
+100%{content: 'Uttar Pradesh';}
+110%{content: 'Maharastra';}
+}
+.home .content a{
+    padding: 10px;
+    background: var(--primcolor);
+    color: var(--primblack);
+    letter-spacing: 2px;
+    font-weight: 550;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.home .content a:hover{
+    background-color: var(--primyellow);
+    color: var(--primcolor);
+}
+@media (max-width:850px){
+    .home{
+        background-position: 50%;
+    }
+}
+@media (max-width:450px){
+    .home .content h5{
+       font-size: 30px;
+    }
+    .home .content h1{
+        font-size: 38px;
+    }
+    .home .content p{
+        font-size: 13px;
+    }
+}
+/* Home section ----- */
+
+/* section book start  */
+.book {
+    background: var(--primcolor);
+    padding: 50px;
+}
+.main-text h1{
+    text-align: center;
+    text-shadow: 0px 1px 1px var(--primblack);
+}
+.main-text h1 span{
+    color: var(--primyellow);
+}
+.book .card{
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px -4px var(--primblack);
+}
+.book .row{
+    margin-top: 30px;
+}
+.book form input{
+    padding: 17px;
+    color: var(--primblack);
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px -6px var(--primblack);
+}
+
+.book form textarea{
+    border: none;
+    border-radius: 10px;
+    resize: none;
+    box-shadow: 0px 5px 5px -6px var(--primblack);
+    height: 220px;
+}
+
+.book .submit{
+    width: 150px;
+    font-size: 16px;
+    font-weight: 550;
+    background: var(--primyellow);
+    color: var(--primcolor);
+    margin-top: 10px;
+    transition: 0.5s;
+}
+.book .submit:hover{
+    width: 170px;
+    transition: all 1s ease-in-out;
+    font-size: large;
+}
+/* section book start  */
+
+@media (max-width:750px){
+    .book{
+        padding: 0;
+    }
+    .main-text h1{
+        padding: 20px;
+    }
+}
+
+
+/* -- --- Section Package start   */
+.main-txt h1{
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+    text-shadow: 0px 1px 1px var(--primblack);
+}
+.main-txt h1 span{
+    color: var(--primyellow);
+}
+.packages .card{
+    border-radius: 5px;
+    border: none;
+    box-sizing: rgba(0,0,0,0.1) 0px 4px 12px;
+}
+.packages .card img{
+    border-radius: 5px;
+}
+.packages .card .card-body{
+    background: transparent;
+}
+.packages .card .card-body h1{
+    font-size: 25px;
+    font-weight: 600;
+}
+.packages .card .card-bodyp{
+    font-size: 15px;
+}
+.checked{
+    color: var(--primyellow);
+}
+.star i{
+    font-size: 15px;
+}
+.packages .card .card-body h6{
+    font-size: 20px;
+}
+.packages .card .card-body a{
+padding: 10px;
+text-decoration: none;
+background: var(--primyellow);
+color: var(--primcolor);
+border-radius: 5px;
+}
+.packages .card .card-body a:hover{
+    font-size: large;
+}
+/* -- --- Section Package End  */
+
+
+
+
+
+/* <!-- Section Services Start --> */
+
+.services{
+    background: var(--primcolor);
+    margin-top: 50px;
+}
+.services .card{
+    box-shadow: 6px 3px 5px -6px var(--primblack);
+    border: none;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+.services .card i{
+    font-size: 80px;
+    text-align: center;
+    color: var(--primyellow);
+    margin-top: 20px;
+}
+
+.services .card .card-body h3{
+    font-weight: 600;
+}
+.services .card .card-body{
+    text-align: center;
+}
+
+/* <!-- Section Services End --> */
+
+
+/* Section Gallary Start  */
+.gallary{
+    margin-top: 50px;
+}
+.gallary .card{
+    border-radius: 10px;
+    box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+    cursor: pointer;
+}
+.gallary .card img{
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.gallary .card img:hover{
+    transform: scale(1.1);
+}
+/* Section Gallary End  */
+
+
+/* About Start  */
+
+ .about{
+    padding: 50px;
+    background: var(--primcolor);
+ }
+ .about .card{
+    border-radius: 10px;
+ }
+ .about .card img{
+    border-radius: 10px;
+ }
+ .about h2{
+    font-weight: 600;
+    letter-spacing: 1px;
+ }
+ .about p{
+font-size: 500;
+ }
+
+ #about-btn{
+    width: 150px;
+    height: 38px;
+    border: none;
+    border-radius: 5px;
+    background: var(--primyellow);
+    color: var(--primcolor);
+    letter-spacing: 2px;
+    font-weight: 550;
+    transition: 0.5s ease;
+    cursor: pointer;
+ }
+ #about-btn:hover{
+    width: 170px;
+ }
+
+ @media screen and (max-width: 750px) {
+.about{
+    padding: 0;
+}
+ }
+/* About End  */
+
+/* Footer Start  */
+#footer{
+    width: 100%;
+    margin-top: 150px;
+    text-align: center;
+    background: var(--primcolor);
+}
+#footer h1{
+    font-weight: 600;
+    padding-top: 30px;
+    text-shadow: 0px 0px 1px var(--primblack);
+}
+#footer h1 span{
+    color: var(--primyellow);
+}
+.social-links i{
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    background: var(--primblack);
+    color: var(--primcolor);
+    margin-left: 10px;
+    margin-bottom: 10px;
+    transition: 0.5px ease;
+    cursor: pointer;
+}
+.social-links i:hover{
+    background: var(--primyellow);
+}
+/* Footer End  */
+

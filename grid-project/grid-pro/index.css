@@ -1,0 +1,132 @@
+body,html{
+    font-family: sans-serif;
+    height: 100vh;
+    background: linear-gradient(to bottom right, darkgrey,rgb(253, 130, 130));
+    transition: background-color 0.5s;
+}
+#div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 1fr 0.8fr;
+    grid-template-areas: 
+      "navbar navbar navbar navbar"
+      "sidebar main main main"
+      "sidebar section1 section2 section3"
+      "sidebar section4 section4 section4" 
+      "footer footer footer footer";
+
+      gap: 20px;
+      height: 100%;
+      animation: fadeIn is ease-in-out;
+}
+
+nav{
+    grid-area: navbar;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bolder;
+    background-color: #8a8989;
+}
+main{
+    grid-area: main;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+#sidebar{
+    grid-area: sidebar;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8e303;
+}
+#section1{
+    grid-area: section1;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #390202;
+}
+#section2{
+    grid-area: section2;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #022752;
+}#section3{
+    grid-area: section3;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #04596636;
+}#section4{
+    grid-area: section4;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #48022f;
+}
+footer{
+    grid-area: footer;
+    padding: 18px;
+    margin-bottom:14px;
+    font-size: 30px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #200244;
+}
+
+nav, main, #sidebar, #section1, #section2, #section3, #section4, footer{
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    transition: transform 0.5s, box-shadow 0.3s;
+}
+nav:hover, main:hover, #sidebar:hover, #section1:hover, #section2:hover, #section3:hover, #section4:hover, footer:hover{
+transform: scale(1.01);
+box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+}
+@media(max-width: 700px){
+    #div{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "navbar"
+        "main"
+        "sidebar"
+        "section1"
+        "section2"
+        "section3"
+        "section4"
+        "footer";
+    }
+}
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }to{
+        opacity: 2;
+    }
+}
